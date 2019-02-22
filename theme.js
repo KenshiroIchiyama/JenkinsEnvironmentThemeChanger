@@ -12,7 +12,7 @@ window.addEventListener("load", function()
 	{
 		header.style.backgroundColor = DEV_HEADER_COLOR;
 	}
-	else if( title.match(/Staging/) )
+	else if( title.match(/Staging/) || title.match(/DeployGate/) )
 	{
 		header.style.backgroundColor = STAGING_HEADER_COLOR;
 	}
