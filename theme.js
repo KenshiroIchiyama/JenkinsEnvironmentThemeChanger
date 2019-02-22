@@ -24,4 +24,9 @@ window.addEventListener("load", function()
 	{
 		header.style.backgroundColor = DEFAULT_HEADER_COLOR;
 	}
+	
+	if( title.match(/Prod.*build\?/) )
+	{
+		alert('本番環境に対しての操作をしようとしています。注意してください！');
+	}
 }, false);
