@@ -16,7 +16,7 @@ window.addEventListener("load", function()
 	{
 		header.style.backgroundColor = STAGING_HEADER_COLOR;
 	}
-	else if( title.match(/Prod/) )
+	else if( title.match(/Prod/) || title.match(/D_Database.*Reset/) )
 	{
 		header.style.backgroundColor = PROD_HEADER_COLOR;
 	}
@@ -28,5 +28,10 @@ window.addEventListener("load", function()
 	if( title.match(/Prod.*build\?/) )
 	{
 		alert('本番環境に対しての操作をしようとしています。注意してください！');
+	}
+	
+	if( title.match(/D_Database.*Reset.*build\?/) )
+	{
+		alert('開発環境のデータベースをリセットしようとしています。注意してください！');
 	}
 }, false);
